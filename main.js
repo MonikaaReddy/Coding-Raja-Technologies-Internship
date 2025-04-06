@@ -16,10 +16,10 @@ let track_index = 0;
 let isPlaying = false;
 let updateTimer;
 
-// Create new audio element
+
 let curr_track = document.createElement('audio');
 
-// Define the tracks that have to be played
+
 let track_list = [
   {
     name: "Night Owl",
@@ -43,15 +43,15 @@ let track_list = [
 
 function random_bg_color() {
 
-  // Get a number between 64 to 256 (for getting lighter colors)
+
   let red = Math.floor(Math.random() * 256) + 64;
   let green = Math.floor(Math.random() * 256) + 64;
   let blue = Math.floor(Math.random() * 256) + 64;
 
-  // Construct a color withe the given values
+
   let bgColor = "rgb(" + red + "," + green + "," + blue + ")";
 
-  // Set the background to that color
+
   document.body.style.background = bgColor;
 }
 
@@ -77,7 +77,6 @@ function resetValues() {
   seek_slider.value = 0;
 }
 
-// Load the first track in the tracklist
 loadTrack(track_index);
 
 function playpauseTrack() {
