@@ -29,7 +29,7 @@ function addNewWEField() {
         
     
     }
-    //generating cv
+
     function generateCV() {
         console.log("generating cv");
     
@@ -41,7 +41,7 @@ function addNewWEField() {
     
     document.getElementById("nameT2").innerHTML = nameField;
     
-    //address
+
     document.getElementById("addressT").innerHTML = document.getElementById("addressField").value;
     document.getElementById("githubT").innerHTML = document.getElementById(
         "githubField"
@@ -53,13 +53,9 @@ function addNewWEField() {
         "linkedField"
       ).value;
     
-      //objective
-    
       document.getElementById("objectiveT").innerHTML = document.getElementById(
         "objectiveField"
       ).value;
-    
-      //we
     
       let wes = document.getElementsByClassName("weField");
     
@@ -71,8 +67,6 @@ function addNewWEField() {
     }
     document.getElementById("weT").innerHTML = str;
     
-      //aq
-    
       let aqs = document.getElementsByClassName("eqField");
     
       let str1 = "";
@@ -82,8 +76,6 @@ function addNewWEField() {
       }
     
       document.getElementById("aqT").innerHTML = str1;
-    
-      //code for setting image
     
       let file = document.getElementById("imgField").files[0];
     
@@ -95,8 +87,6 @@ function addNewWEField() {
     
       console.log(reader.result);
     
-      //set the image to template
-    
       reader.onloadend = function () {
         document.getElementById("imgTemplate").src = reader.result;
       };
@@ -105,7 +95,6 @@ function addNewWEField() {
       document.getElementById("cv-template").style.display = "block";
     }
     
-    //print cv
     function printCV() {
       window.print();
     }   
